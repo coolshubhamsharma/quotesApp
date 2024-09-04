@@ -1,0 +1,39 @@
+.new-quote-form{
+    padding: 16px;
+    background-color: linen;
+    width: 360px;
+    box-shadow: 2px 3px 4px rgb(26, 24, 24);
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.new-quote-form input{
+   box-sizing: border-box;
+   margin: 5px;
+   width: 100%;
+}
+
+.new-quote-form label{
+     display: block;
+     margin: 5px;
+}
+
+.new-quote-form textarea{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.new-quote-form textarea:focus{
+    outline: none;
+}
+
+button{
+    margin-top: 5px;
+    color: aliceblue;
+    background-color: rgb(7, 77, 7);
+    font-size: medium;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+}
