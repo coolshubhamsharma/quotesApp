@@ -5,15 +5,17 @@ const seedDB = require('./seed');
 const cors = require('cors');
 const quoteRoutes = require('./apis/quoteRoutes');
 
+const dbURL = process.env.dbURL;
 mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i4fs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
     console.log('db connected');
 })
 .catch((err)=>{
-    console.log('error , db not connectd' , err);
+    console.log('error , db not connectd');
 })
 
-app.use(cors({origin: ['http://localhost:3000'] })); //tellings cors that which server is going to send the get request
+const REACT_APP_BACKEND_URL = process.env.BackUrl;
+app.use(cors({origin: [REACT_APP_BACKEND_URL] })); //tellings cors that which server is going to send the get request
 
 app.use(express.json());//json data
 app.use(express.urlencoded({extended:true})); //form data
