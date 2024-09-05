@@ -14,7 +14,8 @@ mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i
     console.log('error , db not connectd');
 })
 
-app.use(cors({origin: ['http://localhost:3000'] })); //tellings cors that which server is going to send the get request
+const REACT_APP_BACKEND_URL = process.env.BackUrl;
+app.use(cors({origin: [REACT_APP_BACKEND_URL] })); //tellings cors that which server is going to send the get request
 
 app.use(express.json());//json data
 app.use(express.urlencoded({extended:true})); //form data
