@@ -5,7 +5,7 @@ const seedDB = require('./seed');
 const cors = require('cors');
 const quoteRoutes = require('./apis/quoteRoutes');
 
-mongoose.connect('mongodb://127.0.0.1:27017/Quote')
+mongoose.connect(`mongodb+srv://coolshubhamsharma26:${process.env.dbPass}@cluster1.8i4fs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 .then(()=>{
     console.log('db connected');
 })
