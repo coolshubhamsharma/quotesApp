@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i
     console.log('db connected');
 })
 .catch((err)=>{
-    console.log('error , db not connectd');
+    console.log('error , db not connectd', err);
 })
 
 const REACT_APP_BACKEND_URL = process.env.BackUrl;
