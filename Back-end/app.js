@@ -6,7 +6,7 @@ const cors = require('cors');
 const quoteRoutes = require('./apis/quoteRoutes');
 
 const dbURL = process.env.dbURL;
-mongoose.connect(dbURL)
+mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i4fs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
     console.log('db connected');
 })
@@ -14,7 +14,7 @@ mongoose.connect(dbURL)
     console.log('error , db not connectd');
 })
 
-app.use(cors({origin: ['100.20.92.101'] })); //tellings cors that which server is going to send the get request
+app.use(cors({origin: ['http://localhost:3000'] })); //tellings cors that which server is going to send the get request
 
 app.use(express.json());//json data
 app.use(express.urlencoded({extended:true})); //form data
