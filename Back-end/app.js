@@ -5,12 +5,12 @@ const seedDB = require('./seed');
 const cors = require('cors');
 const quoteRoutes = require('./apis/quoteRoutes');
 
-mongoose.connect('mongodb://127.0.0.1:27017/Quote')
+mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i4fs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
     console.log('db connected');
 })
 .catch((err)=>{
-    console.log('error , db not connectd');
+    console.log('error , db not connectd' , err);
 })
 
 app.use(cors({origin: ['http://localhost:3000'] })); //tellings cors that which server is going to send the get request
