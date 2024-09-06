@@ -7,6 +7,7 @@ router.use(express.urlencoded({extended:true}));
 router.get('/allquotes' , async(req , res)=>{
     try{
         let allQuotes = await Quotes.find();
+        // console.log(allQuotes);
         res.status(200).json(allQuotes);
     }
     catch(e){
