@@ -1,6 +1,6 @@
 <h1 align="center"><b> Quotes-App </b></h1> 
 
-Link - <a href=""> Link Available Soon</a>
+Link - <a href="https://quotesapp-1.onrender.com/"> Quotes-App</a>
 <br>
 <p align="center">
 <img src="./front-end/public/Screenshot 2024-09-30 142712.png" width="700" title="Youtube-Clone">
