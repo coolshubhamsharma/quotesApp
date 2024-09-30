@@ -1,4 +1,4 @@
-<h1 align="center"><b> Netflix-Clone </b></h1> 
+<h1 align="center"><b> Quotes-App </b></h1> 
 
 Link - <a href=""> Link Available Soon</a>
 <br>
