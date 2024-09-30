@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import styles from './ShowQuote.module.css'
 
 const ShowQuotes = () => {
 
@@ -12,7 +13,7 @@ const ShowQuotes = () => {
     })
 
     async function fetchQuote(){
-        let res = await axios.get(`http://localhost:8080/quote/${params.id}`);
+        let res = await axios.get(`https://quotesapp-f45q.onrender.com/quote/${params.id}`);
         let {author , text} = res.data;
         // console.log(author);
         // console.log(text);
@@ -24,9 +25,9 @@ const ShowQuotes = () => {
         fetchQuote();
     } , []);
   return (
-    <div>
+    <div className={styles.show}>
         <p>{quote.text}</p>
-        <h2>{quote.author}</h2>
+        <h4>{quote.author}</h4>
     </div>
   )
 }

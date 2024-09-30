@@ -1,0 +1,9 @@
+.all{
+    display: flex;
+    flex-direction: column;
+}
+
+.all h1{
+    text-align: center;
+    margin: 1%;
+}

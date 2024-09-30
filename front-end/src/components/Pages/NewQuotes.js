@@ -17,7 +17,7 @@ const NewQuotes = () => {
     try{
       console.log(author);
       console.log(text);
-      let res = await axios.post('http://localhost:8080/addquotes' , {author,text} , {
+      let res = await axios.post('https://quotesapp-f45q.onrender.com/addquotes' , {author,text} , {
         headers: {
           'Content-Type': 'application/json'}});
       console.log(res);
@@ -30,14 +30,19 @@ const NewQuotes = () => {
 
   return (
     <form onSubmit={addQuoteHandler} className={styles['new-quote-form']}>
+
         <div>
-            <label htmlFor="author">Author</label>
+          <h1>Add Your Quote</h1>
+        </div>
+
+        <div>
+            <h2><label htmlFor="author">Author</label></h2>
             <input type="text" id='author' ref={usernameInputRef} placeholder="Author's Name"/>
         </div>
 
         <div>
-            <label htmlFor="quote">Text</label>
-            <textarea name='' id='quote' cols={15} rows={4} ref={quoteInputRef} placeholder="Author's quote"/>
+            <h2><label htmlFor="quote">Text</label></h2>
+            <textarea name='' id='quote' cols={15} rows={4} ref={quoteInputRef} placeholder=" Quote"/>
         </div>
 
         <button>Add Quote</button>

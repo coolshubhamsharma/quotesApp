@@ -4,9 +4,12 @@ const mongoose = require('mongoose');
 const seedDB = require('./seed');
 const cors = require('cors');
 const quoteRoutes = require('./apis/quoteRoutes');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const dbURL = process.env.dbURL;
-mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i4fs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(dbURL)
 .then(()=>{
     console.log('db connected');
 })
@@ -14,8 +17,8 @@ mongoose.connect('mongodb+srv://coolshubhamsharma26:URgrvj63rukiOUYO@cluster0.8i
     console.log('error , db not connectd', err);
 })
 
-const REACT_APP_BACKEND_URL = process.env.BackUrl;
-app.use(cors({origin: [REACT_APP_BACKEND_URL] })); //tellings cors that which server is going to send the get request
+
+app.use(cors({origin:'https://quotesapp-1.onrender.com'})); //tellings cors that which server is going to send the get request
 
 app.use(express.json());//json data
 app.use(express.urlencoded({extended:true})); //form data

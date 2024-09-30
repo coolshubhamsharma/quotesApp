@@ -1,16 +1,24 @@
 .new-quote-form{
     padding: 16px;
-    background-color: linen;
-    width: 360px;
-    box-shadow: 2px 3px 4px rgb(26, 24, 24);
+    background-color: bisque;
+    max-width: 400px;
+    height: 60vh;
+    box-shadow: 10px 10px 5px lightskyblue;
     border-radius: 5px;
     margin: 30px auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
 }
 
 .new-quote-form input{
    box-sizing: border-box;
    margin: 5px;
    width: 100%;
+   border-radius: 5px;
+   height: 5vh;
+   font-size: medium;
 }
 
 .new-quote-form label{
@@ -21,6 +29,10 @@
 .new-quote-form textarea{
     box-sizing: border-box;
     width: 100%;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 100;
 }
 
 .new-quote-form textarea:focus{
@@ -37,3 +49,4 @@ button{
     border-radius: 5px;
     border: none;
 }
+

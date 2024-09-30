@@ -6,7 +6,7 @@ router.use(express.urlencoded({extended:true}));
 //route to show all the quotes
 router.get('/allquotes' , async(req , res)=>{
     try{
-        let allQuotes = await Quotes.find();
+        let allQuotes = await Quotes.find({});
         // console.log(allQuotes);
         res.status(200).json(allQuotes);
     }

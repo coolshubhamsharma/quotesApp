@@ -12,7 +12,7 @@ const Quote = (props) => {
     <li className={styles.quote}>
         <span>
             <p>{props.text}</p>
-            <h3>{props.author}</h3>
+            <h4>{props.author}</h4>
         </span>
         <button onClick={()=>showQuoteHandler(props.id)}>view Full quote</button>
     </li>
